@@ -1,0 +1,151 @@
+/* lato-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/lato-v23-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+		  url('../fonts/lato-v23-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+ }
+ /* lato-900 - latin */
+ @font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 900;
+	src: url('../fonts/lato-v23-latin-900.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+		  url('../fonts/lato-v23-latin-900.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+ }
+ html{
+	box-sizing: border-box;
+ }
+ *,*::before, *::after{
+	box-sizing: inherit;
+ }
+
+ body{
+	background: rgb(20, 202, 142);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.inscription{
+	display: flex;
+	/*height: 100vh;*/
+	color: rgba(17, 108, 182, 0.87);
+	position: relative;
+	text-transform: uppercase;
+	font-size: 120px;
+	font-weight: bold;
+	width: 100%;
+	overflow: hidden;
+}
+.text{
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	animation: move 10s linear infinite;
+	margin-bottom: 10px;
+}
+@keyframes move {
+	0%{
+		transform: translateX(100%);
+			}
+			100% {
+				transform: translateX(-100%) ;
+			}
+}
+.container{
+	position: static;
+	right: 250px;
+	max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	}
+
+.content{
+		display: flex;
+		flex-direction: column;
+	margin-left: 30px;
+}
+.content_one, .content_two, .content_three{
+	display: flex;
+	max-width: 300px;
+	border: 3px solid rgb(7, 73, 85);
+}
+input{
+	display: block;
+	margin: 0 0 10px 0;
+}
+
+h1{
+	font-size: 20px;
+	margin-left: 40px;
+} 
+h2 {
+	font-size: 20px;
+	margin-left: 40px;;
+}
+.lang{
+	display: block;
+	margin-left: 40px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+.entrance {
+	display: flex;
+	margin-left: 40px;
+	padding: 10px;
+}
+.registration {
+	display: flex;
+	margin-left: 40px;
+	padding: 10px;
+}
+.regBtn {
+	display: block;
+	margin-top: 10px;
+	}
+	.reset{
+		display: block;
+		margin-top: 10px;	
+	}
+select{
+	background: rgb(206, 236, 210);
+	display: block;
+	margin: 0 0 10px 0;
+}
+.form-input{
+	background: rgb(206, 236, 210);
+	transition: background 0.5s;
+}
+.form-input:focus{
+	background: #12d1a8;
+}
+input{
+	
+}
+button{
+	background: rgb(91, 196, 214);
+}
+button:hover{
+	background: rgb(68, 196, 168);
+}
+.buttons-reg, .button-enter{
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (min-width: 540px){
+	.content{
+				flex-direction: row;
+	}
+}
+@media screen and (min-width: 1024px){
+	.container{
+				flex-direction: row;
+				
+	}
+}
